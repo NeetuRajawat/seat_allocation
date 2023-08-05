@@ -9,8 +9,5 @@ const routes: Routes = [];
   exports: [RouterModule]
 })
 export class AppRoutingModule { 
-//   routes: Routes = [
-//     { path: 'seat-arrangements' , component: SeatArrangementsComponent },
-//     { path: '',   redirectTo: '/seat-arrangements', pathMatch: 'full' }, // redirect to `seatArrangement`
-// ];
+
 }

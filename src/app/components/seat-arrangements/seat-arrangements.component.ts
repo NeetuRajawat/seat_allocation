@@ -45,10 +45,6 @@ export class SeatArrangementsComponent implements OnInit {
           this.allocatedSeatLabels.push(...this.allocateMiddleSeats(i, middleStart, numSeats));
           break;
         } 
-        // else if (!this.allocatedSeats[i][middleStart - 1] && !this.allocatedSeats[i][middleEnd + 1]) {
-        //   this.allocatedSeatLabels.push(...this.allocateMiddleSeats(i, middleStart - 1, numSeats));
-        //   break;
-        // }
       } else if (numSeats === 2) {
         // Allocate 2 seats on the left or right
         // if Two consecutive seats available, allocate on the left
@@ -73,9 +69,6 @@ export class SeatArrangementsComponent implements OnInit {
           if(this.allocatedSeats[i][j] == true){
             break;
           }
-        // if (this.allocatedSeatLabels.length > 0){
-        //   break;
-        // }
         
       }
     }
