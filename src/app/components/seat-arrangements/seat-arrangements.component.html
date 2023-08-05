@@ -1,0 +1,35 @@
+<!-- <h3>Seat Allocation</h3>
+<div>
+  <label for="seatCount">Enter the number of seats:</label>
+  <input type="number" id="seatCount" [(ngModel)]="seatCount">
+  <button (click)="allocateSeats(seatCount)">Allocate Seats</button>
+</div>
+
+<div *ngIf="allocation.length > 0; else elseBlock">
+    <h4>Allocated Seats:</h4>
+    <p>{{ allocation.join(', ') }}</p>
+</div>
+  <ng-template #elseBlock>
+    No seats available
+  </ng-template> -->
+
+  <div>
+    <h2>Seat Allocation</h2>
+    <button class="allocationButton" (click)="allocateSeats(4)">Allocate 4 Seats</button> 
+    <button class="allocationButton" (click)="allocateSeats(3)">Allocate 3 Seats</button>
+    <button class="allocationButton" (click)="allocateSeats(2)">Allocate 2 Seats</button>
+    <button class="allocationButton" (click)="allocateSeats(1)">Allocate 1 Seat</button>
+  
+    <div *ngFor="let row of allocatedSeats; let i = index">
+      <div *ngFor="let seat of row; let j = index" class="seat" [class.allocated]="seat">
+          {{ i + 1 }}{{ stringRef.fromCharCode(97 + j) }}
+      </div>
+    </div>
+  
+    <div *ngIf="allocatedSeatLabels.length > 0">
+      <h2>Allocated Seats:</h2>
+      <p>{{ allocatedSeatLabels.join(', ') }}</p>
+    </div>
+   
+  </div>
+  
